@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="content">
+        <div class="images">
+            <img src="contact.jpg">
+            <img src="kali.jpg">
+            <img src="yadav.jpg">
+            <img src="ser ice.jpg">
+            <img src="contact.jpg">
+        </div>
+    </div>
+    <script>
+        var indexValue=0;
+        function slideshow()
+        {
+            setTimeout(slideshow, 1000);
+            var x;
+            const img=document.querySelectorAll("img");
+            for(x=0; x<img.length;x++)
+            {
+                img[x].style.desplay="none";
+            }
+            indexValue++;
+            if(indexValue>img.length)
+            {
+                indexValue=1;
+            }
+            {
+                img[indexValue-1].style.display="block";
+            }
+        }
+        slideshow();
+    </script>
+</body>
+</html>
